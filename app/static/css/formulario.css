@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: verdana;
+}
+
+:root {
+    --h-color: rgb(0,0,0);
+    --b-color: rgb(18,18,18);
+    --p-color: rgb(84,84,84);
+    --i-color: rgb(110, 110, 110);
+}
+
+body {
+    background-color: var(--b-color);
+    background-image: url("../img/logo-pmesp.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25% 30%;
+    color: white;
+}
+
+header {
+    max-width: 100%;
+    max-height: 7em;
+    height: 7em;
+    background-color: var(--h-color);
+    background-image: url("../img/faixa.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50% 70%;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 200%;
+}
+
+.logos {
+    height: 90%;
+}
+
+.faixa {
+    height: 70%;
+    width: 50%;
+    opacity: 0.4;
+}
+
+main {
+    max-width: 100%;
+    padding: 1%;
+    display: grid;
+    grid-template-columns: 3fr 4fr 3fr;
+}
+
+.questoes {
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    margin-bottom: 0.5em;
+}
+
+input[type="text"], input[type="number"], input[type="submit"] {
+    border: 2px solid transparent;
+    height: 0 1em;
+    background-color: var(--i-color);
+    padding: 0.5em;
+    border-radius: .5rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+    color: white;
+}
+
+input[type="number"] {
+    width: 20%;
+}
+
+input[type="text"], input[type="submit"] {
+    width: 60%;
+}
+
+
+input[type="text"]:hover, input[type="text"]:focus, input[type="number"]:hover, input[type="number"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+    border-color: #ffffff;
+    outline: none;
+}
+
+
+#placeholder {
+    padding: 2%;
+    border-radius: .5rem;
+    background-color: var(--p-color);
+    display: grid;
+    grid-row-gap: 2em;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/formulario.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='img/logo-pmesp2.jpeg') }}" alt="" class="logos">
+        <h1>INSCRIÇÃO</h1>
+        <img src="{{ url_for('static', filename='img/logo-server.png') }}" alt="" class="logos">
+    </header>
+    <main>
+        <div></div>
+        <form action="/formulario/enviar?form=respostas" method="post" id="placeholder">
+            <div class="questoes">
+                <p>Nome Completo:</p>
+                <input type="text" name="Nome" required>
+            </div>
+
+            <div class="questoes">
+                <p>Idade:</p>
+                <input type="number" name="Idade" inputmode="numeric" required>
+            </div>
+
+            <div class="questoes">
+                <p>RG:</p>
+                <input type="text" name="RG" required>
+            </div>
+
+            <div class="questoes">
+                <p>Discord:</p>
+                <input type="text" name="Discord" required>
+            </div>
+
+            <div class="questoes">
+                <p>Escolaridade:</p>
+                <div>
+                    <input type="radio" name="Escolaridade" value="Ensino Fundamental" id="ef" required>
+                    <label for="ef">Ensino Fundamental</label><br>
+                    <input type="radio" name="Escolaridade" value="Ensino Médio" id="em" required>
+                    <label for="em">Ensino Médio</label><br>
+                    <input type="radio" name="Escolaridade" value="Ensino Superior" id="es" required>
+                    <label for="es">Ensino Superior</label>
+                </div>
+            </div>
+
+            <div class="questoes">
+                <p>Tem ficha criminal ?</p>
+                <div>
+                    <input type="radio" name="Ficha" value="Sim" id="ficha-sim" required>
+                    <label for="ficha-sim">Sim</label><br>
+                    <input type="radio" name="Ficha" value="Não" id="ficha-nao" required>
+                    <label for="ficha-nao">Não</label><br>
+                </div>
+            </div>
+
+            <div class="questoes">
+                <p>É habilitado ?</p>
+                <div>
+                    <input type="radio" name="Habilitacao" value="Não" id="habili-nao" required>
+                    <label for="habili-nao">Não</label><br>
+                    <input type="radio" name="Habilitacao" value="A" id="habili-A" required>
+                    <label for="habili-A">A</label><br>
+                    <input type="radio" name="Habilitacao" value="B" id="habili-B" required>
+                    <label for="habili-B">B</label><br>
+                    <input type="radio" name="Habilitacao" value="AB" id="habili-AB" required>
+                    <label for="habili-AB">AB</label><br>
+                </div>
+            </div>
+
+            <div class="questoes">
+                <p>Estado civil:</p>
+                <div>
+                    <input type="radio" name="Estado-civil" value="Solteiro" id="estado-solteiro" required>
+                    <label for="estado-solteiro">Solteiro</label><br>
+                    <input type="radio" name="Estado-civil" value="Casado" id="estado-casado" required>
+                    <label for="estado-casado">Casado</label><br>
+                </div>
+            </div>
+            
+            <input type="submit" value="Enviar Inscrição">
+
+        </form>
+        <div></div>
+    </main>
+</body>
+</html>

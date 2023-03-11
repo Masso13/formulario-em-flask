@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1em;
+    }
+
+    input, textarea {
+        width: 20%;
+        max-width: 20%;
+    }
+
+</style>
+<body>
+    <form action="/formulario/enviar" method="post">
+        <div class="questoes">
+            <label for="questao1">1 - Qual o seu nome ?</label>
+            <input type="text" name="questao1" id="questao1" >
+        </div>
+    
+        <div class="questoes">
+            <label for="questao2">2 - Quantos anos tem ?</label>
+            <input type="number" name="questao2" id="questao2" min="16" >
+        </div>
+    
+        <div class="questoes">
+            <label for="questao3">3 - Já participou de alguma corporação ?</label>
+            <input type="checkbox" name="c1" id="q1">
+        </div>
+    
+        <div class="questoes">
+            <label for="questao4">4 - Por que quer integrar nossa corporação ?</label>
+            <textarea id="questao4" name="questao4" cols="30" rows="10" maxlength="120" type="textarea"></textarea>
+        </div>
+    
+        <input type="submit" value="Enviar" id="button">
+    </form>
+</body>
+<script src="{{ url_for('static', filename='js/formulario.js') }}"></script>
+</html>
